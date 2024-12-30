@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", serif;
+    color: rgb(190, 190, 190);
+
+    --accent_color: rgb(255, 251, 0);
+    --background-base: #1A1A1A;
+    --background-light: #2c2c2c;
+    --background-dark: #131313;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background-base);
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        font-size: 60px;
+        font-weight: 400;
+        color: whitesmoke;
+    }
+
+    h3{
+        color: whitesmoke;
+        font-size: 35px;
+        font-weight: 400;
+    }
+
+    h6{
+        line-height: 150%;
+        font-weight: 200;
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .line{
+        width: 90%;
+        height: 1px;
+        margin: 75px auto 50px;
+        filter: brightness(30%);
+    }
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-base);
+    z-index: 1;
+
+
+
+    #home{
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    img:hover{
+        cursor: pointer;
+    }
+
+    nav{
+        display: flex;
+        list-style: none;
+        
+        a{
+            margin: 0 2em;
+            text-decoration: none;
+            transition-duration: .2s;
+        }
+
+        h6{ 
+            :hover{
+                color: whitesmoke;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// index html
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 125px auto;
+    height: auto;
+    align-items: baseline;
+
+    .hero{
+        display: flex;
+        flex-direction: row;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div{
+                line-height: 0%;
+                margin-bottom: -12px;
+            }
+        }
+    }
+
+    #pfp{
+        width: 350px;
+        margin-right: 100px;
+    }
+
+    ul{
+        margin: 25px auto 0;
+
+        img{
+            margin: 0 10px;
+        }
+    }
+
+    span{
+        font-weight: 300;
+        color: whitesmoke;
+    }
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 125px auto;
+
+    div{
+        transition-duration: .5s;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 25px;
+
+        img{
+            width: 662.5px;
+            height: 375px;
+            margin-bottom: 15px;
+            background-color: var(--background-dark);
+        }
+    }
+
+    .project{
+        background-color: var(--background-light);
+    }
+
+    .project:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+
+    h1{
+        margin-bottom: 100px;
+    }
+
+    h3, h6{
+        padding: 5px 20px;
+    }
+
+    h6{
+        margin-bottom: 5px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin: 125px auto;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+
+
+        li{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .percent{
+        margin-top: -6px;
+        filter: brightness(20%);
+        z-index: -1;
+    }
+
+    img{
+        height: 6px;
+        align-items: baseline;
+    }
+
+    #ue{
+        width: 80%;
+    }
+
+    #unity{
+        width: 50%;
+    }
+
+    #cpp{
+        width: 65%;
+    }
+
+    #python{
+        width: 65%;
+    }
+
+    #html{
+        width: 55%;
+    }
+
+    #css{
+        width: 50%;
+    }
+
+    #postgres{
+        width: 40%;
+    }
+
+    #js{
+        width: 40%;
+    }
+    
+    #blender{
+        width: 90%;
+    }
+
+    #substance{
+        width: 75%;
+    }
+
+    #photoshop{
+        width: 60%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h3{
+        margin: 100px 0 30px;
+    }
+
+    h6{
+        margin-bottom: 10px;
+    }
+
+    .softskills{
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            li{
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 125px auto;
+    width: 40%;
+
+    section{
+        margin: 75px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+// models html
+
+.model-showcase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+
+    .main-image{
+        width: 1382px;
+        height: 777;
+        background-color: var(--background-dark);
+        margin: 15px 0;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+
+        .gallery-btn{
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+
+            margin: 16px;
+        }
+
+        .gallery-btn:hover{
+            transform: scale(1.5);
+        }
+
+        img{
+            width: 345px;
+            height: 180px;
+            background-color: var(--background-dark);
+            margin: 16px;
+            transition-duration: .3s;
+        }
+
+        img:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    .gallery{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1410px;
+        overflow: hidden;
+        margin: auto;
+        
+    }
+}
+
+
+
+//sorcerer's void
+
+.overview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1382px;
+    margin: 25px auto;
+
+    video{
+        position: relative;
+        width: 1382px;
+        height: 777;
+        margin: 15px 0;
+    }
+
+    h6{
+        margin-top: 20px;
+    }
+
+    ul{
+        width: 100%;
+        margin-left: 150px;
+
+        h6{
+            margin: 10px;
+        }
+    }
+
+    .bold{
+        font-weight: 300;
+        color: whitesmoke;
+    }
+
+    .italic{
+        font-style: italic;
+    }
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1382px;
+    margin: 25px auto;
+
+    .features-left, .features-right{
+        display: flex;
+        flex-direction: column;
+        
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .features-left{
+        align-items: baseline;
+
+        h6{
+            margin-left: 50px;
+        }
+    }
+
+    .features-right{
+        align-items: end;
+
+        h6{
+            margin-right: 50px;
+        }
+    }
+
+    img{
+        width: 49.5%;
+    }
+
+    h3{
+        margin-bottom: 25px;
+    }
+
+    h1{
+        margin-bottom: 125px;
+    }
+}
+
+.technical{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1382px;
+    margin: 25px auto;
+
+    img{
+        width: 1382px;
+        margin: 44px 0;
+    }
+
+    a{
+        color: var(--accent_color);
+        text-decoration: none;
+    }
+}
