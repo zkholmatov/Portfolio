@@ -24,7 +24,7 @@
 
     <div class="overview">
         <h1>Sorcerer's Void</h1>
-        <video controls src="sorcerersvoid.mp4"><h1>Play</h1></video>
+        <img src="imgs/sorcerers_void.png" alt="">
         <h6><span class="bold">Sorcerer's Void</span> is a third-person action RPG inspired by iconic Souls-like titles such as <span class="italic">Elden Ring, Black Myth: Wukong,</span> and <span class="italic">Lies of P.</span> This game was developed using Unreal Engine as part of a Senior Capstone Project at the University of Nevada, Reno, in collaboration with two other team members. Staying true to the Souls-like genre, <span class="bold">Sorcerer's Void</span> incorporates key features such as fluid player controls, unique enemies, a progression system, and immersive storytelling.
             <br><br>
             As a team of three guys who grew up playing video games, our goal was to create a game we could proudly showcase to faculty, friends, family, and potential employers. We chose the Souls-like genre because it demands a careful balance between fun and challenge, a critical factor in the success of these games. Achieving this balance demonstrates a solid understanding of what it takes to craft an engaging and rewarding gaming experience.
@@ -47,7 +47,7 @@
         <div class="features-left">
             <h3>Tutorial</h3>
             <div>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Tutorial.mp4"></video>
                 <h6>The tutorial area is designed to help familiarize the player with game controls and mechanics.</h6>
             </div>
         </div>
@@ -55,13 +55,13 @@
             <h3>Weapons</h3>
             <div>
                 <h6>Selection of weapon types with unique combat styles, enhancing gameplay variety.</h6>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Weapons.mp4"></video>
             </div>
         </div>
         <div class="features-left">
             <h3>Blocking</h3>
             <div>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Parry.mp4"></video>
                 <h6>Blocking allows player to reduce incoming attack damage at a cost of stamina or fully deflect all damage with perfectly timed parries.</h6>
             </div>
         </div>
@@ -69,13 +69,13 @@
             <h3>Execution</h3>
             <div>
                 <h6>Enemies can be dismembered during combat, creating cinematic execution moments that enhance immersion.</h6>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Execution.mp4"></video>
             </div>
         </div>
         <div class="features-left">
             <h3>Healing</h3>
             <div>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Healing.mp4"></video>
                 <h6>Healing is a scarce resource that can be used only a few times. Once fully depleted, the player can regain additional uses through combat.
                 </h6>
             </div>
@@ -84,7 +84,7 @@
             <h3>Checkpoint</h3>
             <div>
                 <h6>Players can save their progress and respawn at designated checkpoints scattered throughout the game world.</h6>
-                <img src="imgs/sorcerersvoid.png" alt="">
+                <video class="feature-video" autoplay muted loop src="Checkpoint.mp4"></video>
             </div>
         </div>
     </div>
@@ -95,11 +95,59 @@
 
     <div class="technical">
         <h1>Technical Details</h1>
+        <h6><span class="bold">Development time:</span> 7 months</h6>
+        <h6><span class="bold">Team size:</span> 3 members</h6>
+        <h6><span class="bold">Platform:</span> PC</h6>
+        <h6><span class="bold">Game Engine:</span> Unreal Engine 5.4</h6>
+        <h6><span class="bold">Version Control:</span> Github</h6>
         <img src="imgs/blueprintoverview.png" alt="">
-        <h6>This is a quick overview of the player's offense logic which include light attack combos, heavy attack, charged attack, sprint attack, jump attack, parry counter attack, and execution. All other parts are also completed utilizing Unreal Engine's blueprint system which I go over more in-depth in this <a href="ZakKholmatovSystems.pdf" target="_blank">technical document.</a></h6>
+        <h6>This is a quick overview of the player's offense logic which include light attack combos, heavy attack, charged attack, sprint attack, jump attack, parry counter attack, and execution. Due to time limitations and ease of use of blueprints, all of the showcased work in this prototype is done using blueprints. However, I am planning on rewriting more computationally demanding systems using C++ for the Spring semester. A more in-depth description of these systems is available in this <a href="ZakKholmatovSystems.pdf" target="_blank">technical document.</a></h6>
     </div>
 
     <img class="line" src="imgs/line.png" alt="">
+
+    <script>
+        // Select all video elements
+        const videos = document.querySelectorAll('.feature-video');
+
+        // Function to determine the video closest to the center of the screen
+        function updateVideoPlayback() {
+        let closestVideo = null;
+        let closestDistance = Infinity;
+
+        videos.forEach(video => {
+            // Get the bounding rectangle of the video
+            const rect = video.getBoundingClientRect();
+
+            // Calculate the distance of the video's center to the center of the screen
+            const videoCenter = rect.top + rect.height / 2;
+            const screenCenter = window.innerHeight / 2;
+            const distance = Math.abs(videoCenter - screenCenter);
+
+            // Check if this video is closer to the center than the previous closest one
+            if (distance < closestDistance) {
+            closestDistance = distance;
+            closestVideo = video;
+            }
+        });
+
+        // Play the video closest to the center, pause all others
+        videos.forEach(video => {
+            if (video === closestVideo) {
+            video.play();
+            } else {
+            video.pause();
+            }
+        });
+        }
+
+        // Add an event listener for scroll and resize to continuously check the position
+        window.addEventListener('scroll', updateVideoPlayback);
+        window.addEventListener('resize', updateVideoPlayback);
+
+        // Run the function once on page load
+        updateVideoPlayback();
+    </script>
 
 </body>
 

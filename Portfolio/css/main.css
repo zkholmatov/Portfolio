@@ -5,7 +5,7 @@
   padding: 0;
   font-family: "League Spartan", serif;
   color: rgb(190, 190, 190);
-  --accent_color: rgb(255, 251, 0);
+  --accent_color: rgb(153, 0, 255);
   --background-base: #1A1A1A;
   --background-light: #2c2c2c;
   --background-dark: #131313;
@@ -41,6 +41,13 @@ body .line {
   height: 1px;
   margin: 75px auto 50px;
   filter: brightness(30%);
+}
+body .bold {
+  font-weight: 300;
+  color: whitesmoke;
+}
+body .italic {
+  font-style: italic;
 }
 
 header {
@@ -306,7 +313,7 @@ main span {
   width: 1382px;
   margin: 25px auto;
 }
-.overview video {
+.overview img, .overview video {
   position: relative;
   width: 1382px;
   height: 777;
@@ -317,17 +324,10 @@ main span {
 }
 .overview ul {
   width: 100%;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 .overview ul h6 {
-  margin: 10px;
-}
-.overview .bold {
-  font-weight: 300;
-  color: whitesmoke;
-}
-.overview .italic {
-  font-style: italic;
+  margin: 5px;
 }
 
 .features {
@@ -358,7 +358,7 @@ main span {
 .features .features-right h6 {
   margin-right: 50px;
 }
-.features img {
+.features img, .features video {
   width: 49.5%;
 }
 .features h3 {
@@ -383,4 +383,10 @@ main span {
 .technical a {
   color: var(--accent_color);
   text-decoration: none;
+}
+.technical h1 {
+  margin-bottom: 50px;
+}
+.technical h6 {
+  align-self: baseline;
 }/*# sourceMappingURL=main.css.map */

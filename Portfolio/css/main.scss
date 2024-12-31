@@ -8,7 +8,7 @@
     font-family: "League Spartan", serif;
     color: rgb(190, 190, 190);
 
-    --accent_color: rgb(255, 251, 0);
+    --accent_color: rgb(153, 0, 255);
     --background-base: #1A1A1A;
     --background-light: #2c2c2c;
     --background-dark: #131313;
@@ -47,6 +47,15 @@ body{
         height: 1px;
         margin: 75px auto 50px;
         filter: brightness(30%);
+    }
+
+    .bold{
+        font-weight: 300;
+        color: whitesmoke;
+    }
+
+    .italic{
+        font-style: italic;
     }
 }
 
@@ -380,7 +389,7 @@ main{
     width: 1382px;
     margin: 25px auto;
 
-    video{
+    img, video{
         position: relative;
         width: 1382px;
         height: 777;
@@ -393,20 +402,11 @@ main{
 
     ul{
         width: 100%;
-        margin-left: 150px;
+        margin-left: 50px;
 
         h6{
-            margin: 10px;
+            margin: 5px;
         }
-    }
-
-    .bold{
-        font-weight: 300;
-        color: whitesmoke;
-    }
-
-    .italic{
-        font-style: italic;
     }
 }
 
@@ -444,7 +444,7 @@ main{
         }
     }
 
-    img{
+    img, video{
         width: 49.5%;
     }
 
@@ -473,5 +473,13 @@ main{
     a{
         color: var(--accent_color);
         text-decoration: none;
+    }
+
+    h1{
+        margin-bottom: 50px;
+    }
+
+    h6{
+        align-self: baseline;
     }
 }
