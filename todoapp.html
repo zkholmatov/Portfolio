@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zkholmatov - Wordle Clone</title>
+    <title>zkholmatov - ToDo List</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -28,19 +28,19 @@
     <div id="overview"></div>
     <img class="line" src="" alt="">
 
-    <section id="wordle__clone">
+    <section id="todo__app">
         <!-- OVERVIEW -->
         <div class="project__section">
-            <h1 class="text__title">Wordle Clone</h1>
+            <h1 class="text__title">Web-Based To-Do List</h1>
             <div>
                 <h3>Overview</h3>
-                <h6>A full-stack replication of the popular <span class="italic">New York Times</span> web game <span class="bold">Wordle</span>.</h6>
-                <h6>This project meticulously replicates the core mechanics and features of <span class="bold">Wordle</span>, demonstrating proficiency in full-stack web development, interactive UI design, and database integration.</h6>
+                <h6>A full-stack <span class="bold">To Do List</span> web application utilizing Django Framework.</h6>
+                <h6>This project implements core functionalities of a simple To Do application aiming to improve understanding in full-stack web development and database integration.</h6>
             </div>
 
             <div class="row">
-                <a href="https://github.com/zkholmatov/WordleClone" class="action__btn github">Github</a>
-                <a href="https://wordleclone-8liw.onrender.com/" class="action__btn">Demo</a>
+                <a href="https://github.com/zkholmatov/TodoApp" class="action__btn github">Github</a>
+                <a href="https://todoapp-8x06.onrender.com/" class="action__btn demo">Demo</a>
             </div>
             <h6 class="disclaimer"><span class="italic">*Note*</span> This demo is hosted on Render's free tier, so please allow a few moments for the server to spin up when accessing the live demo. Thank you for your patience!</h6>
         </div>
@@ -52,16 +52,16 @@
             <h3 class="text__title">Screenshots</h3>
             <div class="project__screenshots">
                 <div>
-                    <img src="imgs/wordle/wordle_login.png" alt="">
+                    <img src="imgs/todo/todo_main.png" alt="">
                 </div>
                 <div>
-                    <img src="imgs/wordle/wordle_main.png" alt="">
+                    <img src="imgs/todo/todo_form.png" alt="">
                 </div>
                 <div>
-                    <img src="imgs/wordle/wordle_ranking.png" alt="">
+                    <img src="imgs/todo/todo_search.png" alt="">
                 </div>
                 <div>
-                    <img src="imgs/wordle/wordle_win.png" alt="">
+                    <img src="imgs/todo/todo_description.png" alt="">
                 </div>
             </div>
         </div>
@@ -73,24 +73,24 @@
             <h3>Key Features Implemented</h3>
             <div class="features__list">
                 <div class="feature__item">
-                    <h4><img src="imgs/lock.png" class="img__smallest" alt="">User Authentication</h4>
-                    <h6>A secure user authentication system (registration, login, logout) with persistent data storage in a SQLite3 database for user profiles, game statistics, and leaderboard rankings.</h6>
+                    <h4><img src="imgs/crud.png" class="img__smallest" alt="">Full CRUD Functionality</h4>
+                    <h6>Implemented comprehensive <span class="bold">Create, Read, Update, and Delete</span> operations for tasks, allowing users to fully manage their to-do items from creation to deletion.</h6>
                 </div>
                 <div class="feature__item">
-                    <h4><img src="imgs/human-brain.png" class="img__smallest" alt="">Core Game Logic</h4>
-                    <h6>Backend logic that randomly selects and validates 5-letter words from a comprehensive list, enabling players up to 6 attempts to guess.</h6>
+                    <h4><img src="imgs/human-brain.png" class="img__smallest" alt="">Task Status Management</h4>
+                    <h6>Enables users to easily categorize tasks as <span class="bold">To Do</span> or <span class="bold">Completed,</span> providing clear visual separation and organization within the task list. Additionally, provides controls to easily mark tasks as complete or incomplete directly from the main list, enhancing user interaction and workflow efficiency.</h6>
                 </div>
                 <div class="feature__item">
-                    <h4><img src="imgs/view.png" class="img__smallest" alt="">Intuitive Visual Feedback System</h4>
-                    <h6>An intuitive visual feedback system that provides immediate, color-coded cues for each guess based on whether the letter is <span id="exact">exact</span>, <span id="present">present</span>, or <span id="absent">absent</span> in the answer, mirroring Wordle's iconic design.</h6>
+                    <h4><img src="imgs/evaluation.png" class="img__smallest" alt="">Detailed Task Attributes</h4>
+                    <h6>Displays essential task details including due dates, completion dates, and  <span id="priority">priority</span> levels for effective task prioritization and tracking.</h6>
                 </div>
                 <div class="feature__item">
-                    <h4><img src="imgs/keyboard.png" class="img__smallest" alt="">Dynamic On-Screen Keyboard</h4>
-                    <h6>A dynamic and interactive on-screen keyboard that visually updates the status of each letter after every guess, providing real-time strategic assistance.</h6>
+                    <h4><img src="imgs/exlamation.png" class="img__smallest" alt="">Overdue Task Highlighting</h4>
+                    <h6>Automatically identifies and highlights overdue tasks at the top of the list, ensuring critical items are immediately brought to the user's attention.</h6>
                 </div>
                 <div class="feature__item">
-                    <h4><img src="imgs/ranking.png" class="img__smallest" alt="">Competitive Leaderboard</h4>
-                    <h6>A competitive leaderboard displaying global player rankings based on win streaks and cumulative scores, effectively demonstrating backend data retrieval and sorting capabilities.</h6>
+                    <h4><img src="imgs/search.png" class="img__smallest" alt="">Task Search & Filtering</h4>
+                    <h6>Includes a simple search bar to quickly find specific tasks by keyword, significantly improving navigation and efficiency for larger task lists.</h6>
                 </div>
             </div>
         </div>
@@ -111,7 +111,6 @@
                         <span class="bold">Frontend:</span> 
                         <img src="imgs/html.png" class="img__small" alt="">HTML, 
                         <img src="imgs/css.png" class="img__small" alt="">CSS, 
-                        <img src="imgs/javascript.png" class="img__small" alt="">JavaScript
                     </h6>
                     <h6>
                         <span class="bold">Database:</span> 

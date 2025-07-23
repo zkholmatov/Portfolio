@@ -84,14 +84,14 @@ body {
   flex-direction: column;
 }
 body h1 {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 600;
   color: var(--text-color);
 }
 body h3 {
   color: var(--text-color);
-  font-size: 35px;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 body h4 {
@@ -120,8 +120,9 @@ body .line__short {
   z-index: 1;
 }
 body .bold {
-  font-weight: 300;
+  font-weight: 600;
   color: var(--text-color);
+  background-color: transparent;
 }
 body .italic {
   font-style: italic;
@@ -131,7 +132,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 125px auto;
+  margin: 100px auto;
   height: auto;
   align-items: baseline;
 }
@@ -171,13 +172,6 @@ main span {
   color: var(--text-color);
 }
 
-#main__section, #SV__main {
-  width: 50%;
-  align-items: baseline;
-  justify-content: center;
-  margin: auto;
-}
-
 .projects {
   display: flex;
   flex-direction: column;
@@ -186,21 +180,21 @@ main span {
   width: 100%;
   margin: 50px 0;
 }
-.projects div {
-  transition-duration: 0.2s;
-}
 .projects .container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 25px;
-  margin: 50px 0 0;
 }
 .projects .container img {
   width: 100%;
   background-color: var(--background-dark);
   border-radius: 5px 5px 0 0;
+}
+.projects .project {
+  border-radius: 5px;
+  border: 1px solid var(--background-lighter);
 }
 .projects .project:hover {
   cursor: pointer;
@@ -322,10 +316,14 @@ main span {
   align-items: center;
   margin: 0;
 }
+.education h4 {
+  display: flex;
+  align-items: center;
+}
 .education img {
   margin: 0 15px 0 0;
 }
-.education h4 {
+.education h4.date {
   background-color: var(--background-light);
   padding: 10px 15px;
   border-radius: 5px;
@@ -356,9 +354,10 @@ main span {
 .education .coursework h4 {
   font-size: 20px;
   background-color: var(--background-lighter);
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 .education .coursework .course:hover {
-  background-color: var(--background-lighter);
   transform: scale(1.01);
   cursor: default;
 }
@@ -396,7 +395,7 @@ main span {
   height: 180px;
   background-color: var(--background-dark);
   margin: 16px;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
 }
 .model-showcase ul img:hover {
   cursor: pointer;
@@ -496,23 +495,190 @@ main span {
   align-self: baseline;
 }
 
+.img__smallest, .img__small, .img__medium {
+  margin: 10px;
+  background-color: transparent;
+}
+
+.img__smallest {
+  width: 25px;
+  height: 25px;
+}
+
 .img__small {
   width: 30px;
   height: 30px;
-  margin: 10px;
-  background-color: transparent;
 }
 
 .img__medium {
   width: 50px;
   height: 50px;
-  margin: 10px;
-  background-color: transparent;
 }
 
-#wordle__clone div {
+#main__section, #SV__main, #wordle__clone, #todo__app {
+  width: 50%;
+  align-items: baseline;
+  justify-content: center;
+  margin: auto;
+}
+
+.project__section {
+  margin: 50px 0;
+}
+.project__section .action__btn {
+  margin: 10px 0;
+  background-color: var(--project-accent-color-main);
+  border: 2px solid var(--project-accent-color-main);
+  max-width: 100px;
+}
+.project__section .action__btn.github {
+  background-color: var(--project-accent-color-secondary);
+  border: 2px solid var(--project-accent-color-secondary);
+}
+.project__section h6 {
+  gap: 5px;
+  padding: 10px 0;
+}
+.project__section .row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0;
+}
+.project__section h3 {
+  margin: 30px 0 15px;
+}
+.project__section h4 {
+  display: flex;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+}
+.project__section h4 span {
+  width: 2px;
+  height: 20px;
+  background-color: var(--text-color);
+}
+.project__section a {
+  text-decoration: none;
+}
+
+.action__btn {
+  background-color: var(--accent_color);
+  padding: 15px 25px;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.action__btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#wordle__clone {
+  --project-accent-color-main: #0f9251;
+  --project-accent-color-secondary: #cf8f05;
+}
+#wordle__clone #present {
+  color: var(--project-accent-color-secondary);
+}
+#wordle__clone #exact {
+  color: var(--project-accent-color-main);
+}
+#wordle__clone #absent {
+  color: #505050;
+}
+#wordle__clone #present, #wordle__clone #exact, #wordle__clone #absent {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.tech__stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+  gap: 10px;
+}
+.tech__stack h6 {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-light);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.tech__stack h6:hover {
+  cursor: default;
+  transform: scale(1.01);
+}
+.tech__stack span {
+  font-size: 22px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.features__list {
   display: flex;
   flex-direction: column;
+  margin: 30px 0;
+  gap: 15px;
+}
+
+.feature__item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+.feature__item h4 {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 5px;
+}
+.feature__item h4 img {
+  margin-left: 0;
+  transform: translateY(-2px);
+}
+
+.project__screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 25px;
+  margin: 25px 0;
+}
+.project__screenshots img {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--background-lighter);
+}
+.project__screenshots h6 {
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 15px;
+}
+
+#todo__app {
+  --project-accent-color-main: #5bff9a;
+  --project-accent-color-secondary: #ff2e4a;
+}
+#todo__app .action__btn {
+  background-color: transparent;
+  border: 2px solid var(--project-accent-color-secondary);
+}
+#todo__app .action__btn.demo:hover {
+  background-color: var(--project-accent-color-secondary);
+}
+#todo__app .action__btn.github {
+  background-color: var(--project-accent-color-secondary);
+}
+#todo__app #priority {
+  color: var(--project-accent-color-secondary);
+  font-weight: 600;
+  font-size: 25px;
 }/*# sourceMappingURL=main.css.map */

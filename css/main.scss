@@ -96,15 +96,15 @@ body{
     flex-direction: column;
 
     h1{
-        font-size: 60px;
+        font-size: 70px;
         font-weight: 600;
         color: var(--text-color);
     }
 
     h3{
         color: var(--text-color);
-        font-size: 35px;
-        font-weight: 400;
+        font-size: 40px;
+        font-weight: 500;
         margin-bottom: 30px;
     }
 
@@ -138,8 +138,9 @@ body{
     }
 
     .bold{
-        font-weight: 300;
+        font-weight: 600;
         color: var(--text-color);
+        background-color: transparent;
     }
 
     .italic{
@@ -155,7 +156,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 125px auto;
+    margin: 100px auto;
     height: auto;
     align-items: baseline;
 
@@ -208,13 +209,6 @@ main{
     }
 }
 
-#main__section, #SV__main{
-    width: 50%;
-    align-items: baseline;
-    justify-content: center;
-    margin: auto;
-}
-
 .projects{
     display: flex;
     flex-direction: column;
@@ -223,24 +217,23 @@ main{
     width: 100%;
     margin: 50px 0;
 
-    div{
-        transition-duration: .2s;
-
-    }
-
     .container{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
         gap: 25px;
-        margin: 50px 0 0;
 
         img{
             width: 100%;
             background-color: var(--background-dark);
             border-radius: 5px 5px 0 0;
         }
+    }
+    
+    .project{
+        border-radius: 5px;
+        border: 1px solid var(--background-lighter);
     }
 
     .project:hover{
@@ -388,11 +381,17 @@ main{
         margin: 0;
     }
 
+    h4{
+        display: flex;
+        align-items: center;
+
+    }
+
     img{
         margin: 0 15px 0 0;
     }
 
-    h4{
+    h4.date{
         background-color: var(--background-light);
         padding: 10px 15px;
         border-radius: 5px;
@@ -425,10 +424,12 @@ main{
         h4{
             font-size: 20px;
             background-color: var(--background-lighter);
+            padding: 10px 15px;
+            border-radius: 5px;
         }
 
         .course:hover{
-            background-color: var(--background-lighter);
+            // background-color: var(--background-lighter);
             transform: scale(1.01);
             cursor: default;
         }
@@ -474,7 +475,7 @@ main{
             height: 180px;
             background-color: var(--background-dark);
             margin: 16px;
-            transition-duration: .3s;
+            transition-duration: .2s;
         }
 
         img:hover{
@@ -524,6 +525,8 @@ main{
         }
     }
 }
+
+
 
 .features{
     display: flex;
@@ -599,26 +602,213 @@ main{
     }
 }
 
+.img__smallest, .img__small, .img__medium{
+    margin: 10px;
+    background-color: transparent;
+}
+
+.img__smallest{
+    width: 25px;
+    height: 25px;
+}
+
 .img__small {
     width: 30px;
     height: 30px;
-    margin: 10px;
-    background-color: transparent;
 }
 
 .img__medium {
     width: 50px;
     height: 50px;
-    margin: 10px;
-    background-color: transparent;
+}
+
+#main__section, #SV__main, #wordle__clone, #todo__app{
+    width: 50%;
+    align-items: baseline;
+    justify-content: center;
+    margin: auto;
+}
+
+.project__section{
+    margin: 50px 0;
+
+    .action__btn{
+        margin: 10px 0;
+        background-color: var(--project-accent-color-main);
+        border: 2px solid var(--project-accent-color-main);
+        max-width: 100px;
+    }
+
+    .action__btn.github{
+        background-color: var(--project-accent-color-secondary);
+        border: 2px solid var(--project-accent-color-secondary);
+    }
+
+    h6{
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    h3{
+        margin: 30px 0 15px;
+    }
+
+    h4{
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        gap: 10px;
+
+        span{
+            width: 2px;
+            height: 20px;
+            background-color: var(--text-color);
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.action__btn{
+    background-color: var(--accent_color);
+    padding: 15px 25px;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.action__btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 #wordle__clone{
+    --project-accent-color-main: #0f9251;
+    --project-accent-color-secondary: #cf8f05;
 
-    div{
+    #present{
+        color: var(--project-accent-color-secondary);
+    }
+
+    #exact{
+        color: var(--project-accent-color-main);
+    }
+
+    #absent{
+        color: #505050;
+    }
+    
+    #present, #exact, #absent{
+        font-weight: 600;
+        font-size: 25px;
+    }
+}
+
+.tech__stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+    gap: 10px;
+
+    h6{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        background-color: var(--background-light);
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    h6:hover{
+        cursor: default;
+        transform: scale(1.01);
+    }
+
+    span{
+        font-size: 22px;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+}
+
+.features__list{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+.feature__item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0;
+
+    h4{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        
+        img{
+            margin-left: 0;
+            transform: translateY(-2px);
+        }
+    }
+
+}
+
+.project__screenshots{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 25px;
+    margin: 25px 0;
+
+    img{
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid var(--background-lighter);
+    }
+
+    h6{
+        text-align: center;
+    }
+}
+
+.disclaimer{
+    font-size: 15px;
+}
+
+#todo__app{
+    --project-accent-color-main: #5bff9a;
+    --project-accent-color-secondary: #ff2e4a;
+
+    .action__btn{
+        background-color: transparent;
+        border: 2px solid var(--project-accent-color-secondary);
+    }
+
+    .action__btn.demo:hover{
+        background-color: var(--project-accent-color-secondary);
+    }
+
+    .action__btn.github{
+        background-color: var(--project-accent-color-secondary);
+    }
+
+    #priority{
+        color: var(--project-accent-color-secondary);
+        font-weight: 600;
+        font-size: 25px;
     }
 }

@@ -9,19 +9,24 @@
 <body>
     <!-- HEADER -->
     <header>
-        <a href="index.html"><img id="home" src="imgs/arrow.png" alt=""></a>
-        <nav>
-            <h6><a href="#katana">Katana</a></h6>
-            <h6><a href="#frostmourne">Frostmourne</a></h6>
-            <h6><a href="#greatsword">Greatsword</a></h6>
-        </nav>
-        <span></span>
+        <div>
+            <a href="index.html"><img id="home" src="imgs/arrow.png" alt=""></a>
+            <nav>
+                <h6><a href="#katana">Katana</a></h6>
+                <h6><a href="#deadeye">Deadeye</a></h6>
+                <h6><a href="#frostmourne">Frostmourne</a></h6>
+                <h6><a href="#greatsword">Greatsword</a></h6>
+            </nav>
+            <span></span>
+        </div>
+        <div>
+            <img class="nav__divider" src="imgs/line.png" alt="">
+        </div>
     </header>
 
     <!-- KATANA -->
     <div id="katana"></div>
-    <img class="line" src="imgs/line.png" alt="">
-
+    <img class="line" src="" alt="">
     <div class="model-showcase" id="katana-showcase">
         <h1>Katana</h1>
         <img class="main-image" src="imgs/renders/katanarender1.png" alt="">
@@ -35,6 +40,29 @@
                 <img src="imgs/renders/katanarender5.png" alt="" onclick="changeImage(this, 'katana-showcase')">
                 <img src="imgs/renders/katanarender4.png" alt="" onclick="changeImage(this, 'katana-showcase')">
                 <img src="imgs/renders/katanawireframe.png" alt="" onclick="changeImage(this, 'katana-showcase')">
+            </div>
+            <img class="gallery-btn right-btn" src="imgs/arrow_right.png" alt="">
+        </ul>
+
+    </div>
+
+    <!-- DEADEYE -->
+    <div id="deadeye"></div>
+    <img class="line" src="imgs/line.png" alt="">
+
+    <div class="model-showcase" id="deadeye-showcase">
+        <h1>Deadeye</h1>
+        <img class="main-image" src="imgs/renders/deadeyerender1.png" alt="">
+
+        <ul>
+            <img class="gallery-btn left-btn" src="imgs/arrow_left.png" alt="">
+            <div class="gallery">
+                <img src="imgs/renders/deadeyerender1.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
+                <img src="imgs/renders/deadeyerender2.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
+                <img src="imgs/renders/deadeyerender3.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
+                <img src="imgs/renders/deadeyerender4.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
+                <img src="imgs/renders/deadeyerender5.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
+                <img src="imgs/renders/deadeyewireframe.png" alt="" onclick="changeImage(this, 'deadeye-showcase')">
             </div>
             <img class="gallery-btn right-btn" src="imgs/arrow_right.png" alt="">
         </ul>
