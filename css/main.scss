@@ -622,7 +622,7 @@ main{
     height: 50px;
 }
 
-#main__section, #SV__main, #wordle__clone, #todo__app{
+#main__section, #SV__main, #wordle__clone, #todo__app, #ecommerce{
     width: 50%;
     align-items: baseline;
     justify-content: center;
@@ -810,5 +810,27 @@ main{
         color: var(--project-accent-color-secondary);
         font-weight: 600;
         font-size: 25px;
+    }
+}
+
+#ecommerce{
+    --project-accent-color-main: #003cff;
+    --project-accent-color-secondary: #003cff;
+
+    .action__btn{
+        background-color: transparent;
+        border: 2px solid var(--project-accent-color-secondary);
+    }
+
+    .action__btn.demo:hover{
+        background-color: var(--project-accent-color-secondary);
+    }
+
+    .action__btn.github{
+        background-color: var(--project-accent-color-secondary);
+    }
+
+    .project__screenshots{
+        grid-template-columns: 1fr;
     }
 }
